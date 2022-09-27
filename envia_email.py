@@ -11,19 +11,19 @@ print('////////// Preparando o email... //////////')
 # Iniciando o servidor SMTP legacy outlook para TCP 1.1
 host = 'smtp-legacy.office365.com'
 port = '587'
-login = 'sistema@beanalytic.com.br'
+login = 'sistema@exemplo.com.br'
 senha = password.outlook_sistema
 
 # # Iniciando o servidor SMTP hostgator
-# host = 'mail.sistema.beanalytic.com.br'
+# host = 'mail.sistema.exemplo.com.br'
 # port = '587'
-# login = 'naoresponder@sistema.beanalytic.com.br'
+# login = 'naoresponder@sistema.exemplo.com.br'
 # senha = password.senha_hostgator
 
 # # Iniciando o servidor SMTP ZOHO
 # host = 'smtp.zoho.com'
 # port = '587'
-# login = 'sistema@beanalytic.com.br'
+# login = 'sistema@exemplo.com.br'
 # senha = password.senha_zoho
 
 # Entrando no servidor
@@ -40,8 +40,7 @@ print('//////// Servidor de email SMTP: OK ////////')
 
 ## Pega o e-mail do usuário
 print("Pegando o e-mail do usuário...")
-#emailUser = 'rafael@beanalytic.com.br'
-emailUser = 'rafaelvinicius.developer@gmail.com'
+emailUser = 'exemplo@gmail.com'
 print('ENVIANDO EMAIL PARA :', emailUser)
 
 # Criando o e-mail
@@ -58,7 +57,7 @@ email_msg.attach(MIMEText(corpo, 'html'))
 
 # Lendo e transformando o aquivo de anexo em binário
 print('Preparando anexo do email')
-caminho_arquivo = r'/home/beanalytic/SCRIPTS - PROJETOS/envia_email/anexo.txt'
+caminho_arquivo = r'anexo.txt'
 arquivo = open(caminho_arquivo, 'rb')
 anexo = MIMEBase('aplication', 'octet-stream') 
 anexo.set_payload(arquivo.read())
